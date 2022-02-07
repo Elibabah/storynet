@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Story social network
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Índice
 
-In the project directory, you can run:
+    1. Descripción
+    2. Características generales
+    3. Características técnicas
+    4. Diagrama de flujo
+    5. Prototipado
+    6. Agile
+    7. Producto
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 1. Descripción
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Esta es una aplicación construida con react para conectar a la gente y sus historias. Está especialmente enfocada en formar un nicho de la tradición oral. 
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. Características generales
 
-### `npm run build`
+Esta aplicación permitirá al usuario crear una cuenta con correo y contraseña o registrarse con Gmail. Una vez autenticado, podrá formar parte de la comunidad de esta red para compartir sus relatos. El usuario podrá, además de compartir, editar y eliminar sus propias pblicaciones. Esta red tiene su valor en que todos los usuarios podrán ver el acervo en conjunto así como realizar una búsqueda por palabras clave.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. Características técnicas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ ] React
+- [ ] npm
+- [ ] SPA (Single Page Application)
+- [ ] CRUD
+- [ ] Firebase db | Auth | Firestore
+- [ ] Material UI
+- [ ] Componentes | Propiedades
+- [ ] Elementos | Atributos
+- [ ] Hooks
+- [ ] Ruters
+- [ ] Estado global
+- [ ] Jest Test
+- [ ] Git, GitHub, Branch Modeling, gh-pages
+- [ ] Responsive design
+- [ ] SDLC
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 4. Diagrama de flujo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![DiagramaDeFlujo](https://raw.githubusercontent.com/Elibabah/11_SocialNetwork/development/src/assets/flow-fixed.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 5. Prototipado
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Login
+![Login](https://raw.githubusercontent.com/Elibabah/11_SocialNetwork/development/src/assets/LogIn.png)
 
-## Learn More
+### SigIn
+![Signin](https://raw.githubusercontent.com/Elibabah/11_SocialNetwork/development/src/assets/Signin.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Home
+![Home](https://raw.githubusercontent.com/Elibabah/11_SocialNetwork/development/src/assets/Home.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 6. Agile
+![Agile](https://raw.githubusercontent.com/Elibabah/11_SocialNetwork/development/src/assets/ka.png)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 7. Producto
