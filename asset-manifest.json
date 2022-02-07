@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/storynet/static/css/main.073c9b0a.css",
+    "main.js": "/storynet/static/js/main.16a782a3.js",
+    "static/js/787.0ea7b6c1.chunk.js": "/storynet/static/js/787.0ea7b6c1.chunk.js",
+    "static/media/logo.svg": "/storynet/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/storynet/index.html",
+    "main.073c9b0a.css.map": "/storynet/static/css/main.073c9b0a.css.map",
+    "main.16a782a3.js.map": "/storynet/static/js/main.16a782a3.js.map",
+    "787.0ea7b6c1.chunk.js.map": "/storynet/static/js/787.0ea7b6c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.16a782a3.js"
+  ]
+}
