@@ -65,7 +65,7 @@ export const Home = ({correoUsuario}) => {
 
 
             <CreatePost/>
-            { arrayPublicaciones ? <ReadPost arrayPublicaciones ={arrayPublicaciones} /> : null}
+            { arrayPublicaciones ? <ReadPost arrayPublicaciones ={arrayPublicaciones} setArrayPublicaciones={setArrayPublicaciones} correoUsuario={correoUsuario}/> : null}
 
 
       </div>
