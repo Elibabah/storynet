@@ -64,7 +64,8 @@ export const Home = ({correoUsuario}) => {
             <button onClick={()=> signOut(auth)} >LogOut</button>
 
 
-            <CreatePost/>
+            <CreatePost arrayPublicaciones ={arrayPublicaciones} setArrayPublicaciones={setArrayPublicaciones} correoUsuario={correoUsuario}/>
+            
             { arrayPublicaciones ? <ReadPost arrayPublicaciones ={arrayPublicaciones} setArrayPublicaciones={setArrayPublicaciones} correoUsuario={correoUsuario}/> : null}
 
 

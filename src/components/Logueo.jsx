@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {app} from "../firebase"
 import { auth } from "../firebase"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth"
 
@@ -41,7 +40,7 @@ export const Logueo = () => {
 
             <div className='mb-4'>
                   <label htmlFor="password" className='block text-gray-700 text-sm font-fold mb-2'>Ingresa tu contraseña</label>
-                  <input type="password" name="password" id="password" placeholder="******"  className='shadow appareance-non border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'className='shadow appareance-non border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'/>
+                  <input type="password" name="password" id="password" placeholder="******"  className='shadow appareance-non border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'/>
             </div>
             <div className='flex items-center justify-between'>
                   <button className='bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>{estaRegistrandose ? "Register" : "Login"}</button>
