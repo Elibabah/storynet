@@ -7,25 +7,7 @@ import { ReadPost } from "./ReadPost"
 
 export const Home = ({correoUsuario}) => {
       //console.log(correoUsuario)
-
       const [arrayPublicaciones, setArrayPublicaciones] = useState(null);
-
-      const fakeData = [{
-            "id": 1, 
-            "title": "title fake", 
-            "story": "story fake"
-      },
-      {
-            "id": 2, 
-            "title": "title fake 2", 
-            "story": "story fake 2"
-      },
-      {
-            "id": 3, 
-            "title": "title fake 3", 
-            "story": "story fake 3"
-      }
-]
 
       async function buscarDocumentoOCrearDocumento(idDocumento){
             //Crear referencia al documento
@@ -39,15 +21,11 @@ export const Home = ({correoUsuario}) => {
             return infoDocu.publicaciones
             }else {
             //Si no existe:
-            await setDoc(docuRef, {publicaciones: [...fakeData]});
+            await setDoc(docuRef, {publicaciones: []});
             const consulta = await getDoc(docuRef);
             const infoDocu = consulta.data();
             return infoDocu.publicaciones;
             }
-
-
-
-
       }
 
       useEffect(()=>{
@@ -67,7 +45,5 @@ export const Home = ({correoUsuario}) => {
             <CreatePost arrayPublicaciones ={arrayPublicaciones} setArrayPublicaciones={setArrayPublicaciones} correoUsuario={correoUsuario}/>
             
             { arrayPublicaciones ? <ReadPost arrayPublicaciones ={arrayPublicaciones} setArrayPublicaciones={setArrayPublicaciones} correoUsuario={correoUsuario}/> : null}
-
-
       </div>
       )}
