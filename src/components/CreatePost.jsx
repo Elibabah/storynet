@@ -13,8 +13,8 @@ export const CreatePost = ({correoUsuario, arrayPublicaciones, setArrayPublicaci
             console.log(story)
             // crear nuevo array de publicaciones
             const newArrayPublicaciones = [...arrayPublicaciones, {id: +new Date(), title: title, story: story}]
-            //actualizar base de datos
-            const docuRef = doc(db, `social/${correoUsuario}`);
+            //actualizar base de datosh
+            const docuRef = doc(db, 'social');
             updateDoc(docuRef, { publicaciones: [...newArrayPublicaciones]});
             //actualizar el estado
             setArrayPublicaciones(newArrayPublicaciones);
