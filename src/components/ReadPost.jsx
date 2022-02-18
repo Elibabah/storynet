@@ -1,8 +1,8 @@
 import React from "react";
-import { updateDoc, doc} from "firebase/firestore"
+import { updateDoc, doc, getDoc, setDoc} from "firebase/firestore"
 import { db } from "../firebase"
 // READ
-export const ReadPost = ( {arrayPublicaciones, correoUsuario, setArrayPublicaciones, publicaciones} ) => {
+export const ReadPost = ( {arrayPublicaciones, correoUsuario, setArrayPublicaciones, publicaciones, title, story} ) => {
 
       async function eliminarPublicacion(idPublicacionAEliminar){
             //crear nuevo Array de tareas
@@ -16,9 +16,20 @@ export const ReadPost = ( {arrayPublicaciones, correoUsuario, setArrayPublicacio
             setArrayPublicaciones(newArrayPublicaciones);
       }
 
+      async function editarPublicacion(idPublicacionAEditar, title, story){
+            // obtener valores
+            console.log(idPublicacionAEditar, title, story)
+            //const docuRef = doc(db, `social/${idPublicacionAEditar}`)
 
-      async function editarPublicacion(idPublicacionAEditar){
-            //editar
+            //////////////////////////////////////
+            //buscar documento
+            //const consulta = await getDoc(docuRef);
+            //revisar si existe 
+            //if (consulta.exists()) {
+            //Si existe:
+            ////const infoDocu = consulta.data()
+            ///console.log(infoDocu.publicaciones)}
+            //console.log(consulta.data())
       }
 
       return(
@@ -31,9 +42,10 @@ export const ReadPost = ( {arrayPublicaciones, correoUsuario, setArrayPublicacio
                                           <div key={objetoPublicacion.id}>{objetoPublicacion.title}</div>
                                           <div>{objetoPublicacion.story}</div>
                                           <button onClick={()=> eliminarPublicacion(objetoPublicacion.id)}>Delete</button>
-                                          <button onClick={()=> editarPublicacion(objetoPublicacion.id)}>Edit</button>
+                                          <button onClick={()=> editarPublicacion(objetoPublicacion.id, objetoPublicacion.title, objetoPublicacion.story)}>Edit</button>
+                                                <div>
+                                          </div>
                                     </div>
-
                               )
                         })}
                   </div>

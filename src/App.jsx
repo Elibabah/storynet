@@ -11,6 +11,7 @@ function App() {
   onAuthStateChanged(auth, (userActivo) => {
     if(userActivo){
       setUsuarioGlobal(userActivo)
+      console.log(userActivo)
     }else{
       setUsuarioGlobal(null);
     }
