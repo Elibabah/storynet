@@ -11,7 +11,7 @@ export const CrudRead = () => {
             console.log(querySnapshot)
 
             querySnapshot.forEach((doc) => {
-            console.log(doc.id, doc.data())
+            console.log(doc.data())
             let post = doc.data()
             post.id = doc.id
             postsArray.push(post)
@@ -29,17 +29,24 @@ export const CrudRead = () => {
             traerColl();
       }, []);
 
+      /*const eliminarPost = (id) => {
+            console.log("eliminando")
+            //console.log(id)
+            db.collection("posts").doc(id).delete();
+      };*/
+
+
       return(
             <div>
-                  <h1>News Feed</h1>
+                  <h1>News Feed Here</h1>
                   {console.log(postsArray)}
                   {postsArray.map((post) => {
                         return(
-                        <div key={post.id}>
+                        <div key={post.id}>      
                               <h3>{post.title}</h3>
                               <p>{post.story}</p>
-                              <button>Editar</button>
                               <button>Eliminar</button>
+                              <button>Edit</button>
                         </div>
                   )})}
             </div>
