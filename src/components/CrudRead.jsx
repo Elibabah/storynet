@@ -4,33 +4,41 @@ import { db } from "../firebase"
 
 
 export const CrudRead = () => {
-      const [postsArray, setPostsArray] = useState([])
+      const [posts, setPosts] = useState([])
+      const postsCollectionRef = collection(db, "posts");
 
-      const getData = () => {
+      useEffect(() =>{
+            const getPosts = async () => {
+                  const data = await getDocs(postsCollectionRef);
+                  setPosts(data.docs.map((doc)=>({...doc.data(), id: doc.id})));
+            };
+            console.log(setPosts)
+            getPosts();
+      }, []);
 
-
-
-            db.collection("posts")
-            .onSnapshot((resultados) => {
+      /*const getData = () => {
+            postsCollectionRef.onSnapshot((resultados) => {
             const datos = resultados.docs.map((doc) => ({
                   id: doc.id,
                   ...doc.data(),
             }));
             console.log("Todos los datos de la colección 'posts'", datos);
             });
-
       }
-
       useEffect(() => {
             getData();
-      }, []);
+      }, []);*/
 
       return(
             <div>
-                  <div>
-                  </div>
-                  <h1>News Feed Here!</h1>
-                  
+                  {posts.map((post) =>{
+                        return(
+                              <div key={post.id}>
+                                    <h1>Title: {post.title}</h1>
+                                    <p>Story: {post.story}</p>
+                              </div>
+                        )
+                  })}
             </div>
       )
 }
