@@ -13,6 +13,6 @@ export const Home = ({correoUsuario}) => {
             <h1>Welcome, {correoUsuario}</h1>
             <button onClick={()=> signOut(auth)} >LogOut</button>
             <CrudCreate correoUsuario={correoUsuario}/>
-            <CrudRead/>
+            <CrudRead correoUsuario={correoUsuario}/>
       </div>
       )}
